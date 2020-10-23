@@ -13,6 +13,7 @@ public class TestSystem extends PApplet {
     @Override
     public void setup() {
         ControlP5 cp5 = new ControlP5(this);
+        tabledata();
     }
 
 
