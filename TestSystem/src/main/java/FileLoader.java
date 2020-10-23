@@ -1,7 +1,7 @@
 import processing.core.PApplet;
 import processing.data.StringList;
 
-import static jdk.internal.org.jline.utils.InfoCmp.Capability.lines;
+
 
 public class FileLoader {
 PApplet p;

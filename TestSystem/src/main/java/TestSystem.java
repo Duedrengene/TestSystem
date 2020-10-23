@@ -4,19 +4,43 @@ import processing.core.*;
 
 public class TestSystem extends PApplet {
 
-
     public static void main(String[] args ) {
-        PApplet.main("name");
+        PApplet.main("TestSystem");
 
     }
+    String input;
     FileLoader fL;
-    @Override
-    public void setup() {
-        ControlP5 cp5 = new ControlP5(this);
-        fL = new FileLoader(this);
-        fL.tableData();
-        UI library= new UI(this);
+    ControlP5 cp5;
 
+    @Override
+    public void settings() {
+        size(1000,500);
+
+    }
+
+    public void setup() {
+        cp5 = new ControlP5(this);
+
+
+        fL = new FileLoader(this);
+       // fL.tableData();
+        UI library= new UI(this);
+cp5.addButton("Log ind")
+        .setPosition(200,205)
+        .setSize(183,35)
+        ;
+cp5.addTextfield("Brugernavn")
+        .setCaptionLabel("Brugernavn")
+        .setPosition(150,13)
+        .setSize(283,62)
+        .setAutoClear(false)
+;
+        cp5.addTextfield("Password")
+                .setCaptionLabel("Password")
+                .setPosition(150,113)
+                .setSize(283,62)
+                .setAutoClear(false)
+        ;
     }
 
 
@@ -24,7 +48,12 @@ public class TestSystem extends PApplet {
     public void draw() {
 
     }
+   void Logind () {
+        input = cp5.get(Textfield.class,"Brugernavn").getText();
 
-
+    }
 
 }
+
+
+
