@@ -23,6 +23,7 @@ FileLoader(PApplet p){
         p.println(table.getColumnTitle(0) + " total rows in table");
         for (TableRow row : table.rows()) {
 
+
             String fornavn = row.getString("Fornavn");
             String efternavn = row.getString("Efternavn");
 
