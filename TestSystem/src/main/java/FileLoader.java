@@ -1,7 +1,8 @@
 import processing.core.PApplet;
 import processing.data.StringList;
+import processing.data.Table;
+import processing.data.TableRow;
 
-import static jdk.internal.org.jline.utils.InfoCmp.Capability.lines;
 
 public class FileLoader {
 PApplet p;
@@ -12,14 +13,21 @@ FileLoader(PApplet p){
 }
 
 
-    StringList  fornavn = new StringList();
-    StringList  password = new StringList();
-    void tableData(){
-        String[] lines = p.loadStrings(".csv");
-for(int i =1; i < lines.length; i++) {
-        String[]list =(p.split(lines[i],','));
-        fornavn.append(list[3]);
-        password.append((list[5]));
-    }}
+  //  StringList  fornavn = new StringList();
+    //StringList  password = new StringList();
+    void tableData() {
+        Table table = new Table();
+
+        table = p.loadTable("resources//Data.csv","header,csv");
+        System.out.println(table);
+        p.println(table.getColumnTitle(0) + " total rows in table");
+        for (TableRow row : table.rows()) {
+
+            String fornavn = row.getString("Fornavn");
+            String efternavn = row.getString("Efternavn");
+
+            p.println(fornavn + efternavn);
+        }
+    }
 
 }

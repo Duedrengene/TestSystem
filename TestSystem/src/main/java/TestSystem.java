@@ -6,7 +6,7 @@ public class TestSystem extends PApplet {
 
 
     public static void main(String[] args ) {
-        PApplet.main("name");
+        PApplet.main("TestSystem");
 
     }
     FileLoader fL;
