@@ -9,13 +9,12 @@ public class TestSystem extends PApplet {
         PApplet.main("name");
 
     }
-
+    FileLoader fL;
     @Override
     public void setup() {
         ControlP5 cp5 = new ControlP5(this);
-
-        tabledata();
-
+        fL = new FileLoader(this);
+        fL.tableData();
         UI library= new UI(this);
 
     }
