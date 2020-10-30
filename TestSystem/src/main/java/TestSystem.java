@@ -3,14 +3,16 @@ import controlP5.*;
 import processing.core.*;
 
 public class TestSystem extends PApplet {
+    String input;
+    FileLoader fL;
+    ControlP5 cp5;
+    FileHandler fH;
+
 
     public static void main(String[] args ) {
         PApplet.main("TestSystem");
 
     }
-    String input;
-    FileLoader fL;
-    ControlP5 cp5;
 
     @Override
     public void settings() {
@@ -23,6 +25,7 @@ public class TestSystem extends PApplet {
 
 
         fL = new FileLoader(this);
+        fH = FileHandler(this,fL.table);
        fL.tableData();
         UI library= new UI(this);
 cp5.addButton("log On")

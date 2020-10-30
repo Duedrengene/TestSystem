@@ -6,7 +6,13 @@ import processing.data.TableRow;
 
 public class FileLoader {
 PApplet p;
-FileLoader(PApplet p){
+    String fornavn;
+    String efternavn;
+    String username;
+    String password;
+    Table table = new Table();
+
+    FileLoader(PApplet p){
     this.p = p;
 
 
@@ -16,22 +22,24 @@ FileLoader(PApplet p){
   //  StringList  fornavn = new StringList();
     //StringList  password = new StringList();
     void tableData() {
-        Table table = new Table();
+
 
         table = p.loadTable("resources//Dataen.csv","header,csv");
         System.out.println(table);
         p.println(table.getColumnTitle(0) + " total rows in table");
         for (TableRow row : table.rows()) {
-            row.setString("Fornavn","Mathias ");
-            String fornavn = row.getString("Fornavn");
-            String efternavn = row.getString("Efternavn");
+            row.setString("Fornavn","MATHIAS");
+        fornavn  =    row.getString("Fornavn");
+        efternavn = row.getString("Efternavn");
+        username  = row.getString("Efternavn");
+        password   = row.getString("Efternavn");
+
             p.println(row);
             p.println(fornavn + efternavn);
 
             String id = row.getString("ID");
 
         }
-        p.saveTable(table,"resources/new.csv");
     }
 
 }
