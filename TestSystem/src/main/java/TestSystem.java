@@ -23,7 +23,7 @@ public class TestSystem extends PApplet {
 
 
         fL = new FileLoader(this);
-       // fL.tableData();
+       fL.tableData();
         UI library= new UI(this);
 cp5.addButton("Log ind")
         .setPosition(200,205)
