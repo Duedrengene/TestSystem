@@ -53,9 +53,11 @@ System.out.println("Your result " + result + "/" + questions.length);
 
 
         fL = new FileLoader(this);
-       // fL.tableData();
+       fL.tableData();
         UI library= new UI(this);
-cp5.addButton("LOGON")
+
+cp5.addButton("log On")
+
         .setPosition(200,205)
         .setSize(183,35)
         ;
@@ -78,10 +80,9 @@ cp5.addTextfield("fornavn")
     public void draw() {
 
 
-    }
-   public void LOGON() {
-        input = cp5.get(Textfield.class,"fornavn").getText();
-       if(input == cp5.get(Textfield.class,"fornavn").getText()) cp5.get(Textfield.class, "fornavn").clear();
+ 
+   void logOn() {
+        input = cp5.get(Textfield.class,"Brugernavn").getText();
 
 
     }
