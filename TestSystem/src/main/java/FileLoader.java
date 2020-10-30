@@ -13,8 +13,7 @@ FileLoader(PApplet p){
 }
 
 
-  //  StringList  fornavn = new StringList();
-    //StringList  password = new StringList();
+ 
     void tableData() {
         Table table = new Table();
 
