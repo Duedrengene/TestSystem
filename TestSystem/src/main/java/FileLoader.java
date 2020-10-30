@@ -18,7 +18,7 @@ FileLoader(PApplet p){
     void tableData() {
         Table table = new Table();
 
-        table = p.loadTable("resources//Data.csv","header,csv");
+        table = p.loadTable("resources//Dataen.csv","header,csv");
         System.out.println(table);
         p.println(table.getColumnTitle(0) + " total rows in table");
         for (TableRow row : table.rows()) {
@@ -31,7 +31,7 @@ FileLoader(PApplet p){
             String id = row.getString("ID");
 
         }
-        p.saveTable(table,"lol.csv","/resources");
+        p.saveTable(table,"resources/new.csv");
     }
 
 }
