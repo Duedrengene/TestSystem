@@ -26,8 +26,9 @@ FileLoader(PApplet p){
 
             String fornavn = row.getString("Fornavn");
             String efternavn = row.getString("Efternavn");
-
-            p.println(fornavn + efternavn);
+            String id = row.getString("ID");
+            //row.setString("Fornavn","Mathias");
+            p.println(fornavn + efternavn+" "+id);
         }
     }
 
