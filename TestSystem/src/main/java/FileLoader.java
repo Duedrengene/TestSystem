@@ -26,9 +26,10 @@ FileLoader(PApplet p){
             String fornavn = row.getString("Fornavn");
             String efternavn = row.getString("Efternavn");
             p.println(row);
-
-
             p.println(fornavn + efternavn);
+
+            String id = row.getString("ID");
+
         }
         p.saveTable(table,"lol.csv","/resources");
     }

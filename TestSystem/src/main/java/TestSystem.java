@@ -25,7 +25,7 @@ public class TestSystem extends PApplet {
         fL = new FileLoader(this);
        fL.tableData();
         UI library= new UI(this);
-cp5.addButton("Log ind")
+cp5.addButton("log On")
         .setPosition(200,205)
         .setSize(183,35)
         ;
@@ -48,7 +48,7 @@ cp5.addTextfield("Brugernavn")
     public void draw() {
 
     }
-   void Logind () {
+   void logOn() {
         input = cp5.get(Textfield.class,"Brugernavn").getText();
 
     }
