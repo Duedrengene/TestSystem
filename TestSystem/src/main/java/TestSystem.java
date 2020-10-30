@@ -56,7 +56,7 @@ System.out.println("Your result " + result + "/" + questions.length);
        fL.tableData();
         UI library= new UI(this);
 
-cp5.addButton("log On")
+cp5.addButton("logOn")
 
         .setPosition(200,205)
         .setSize(183,35)
@@ -79,7 +79,7 @@ cp5.addTextfield("fornavn")
     @Override
     public void draw() {
 
-
+    }
  
    void logOn() {
         input = cp5.get(Textfield.class,"Brugernavn").getText();
