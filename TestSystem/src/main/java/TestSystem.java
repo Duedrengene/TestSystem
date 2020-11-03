@@ -19,9 +19,9 @@ public class TestSystem extends PApplet {
     String q2 = "What rule  in Set theory is true?\n" + "(a)Gulerod\n(b)Yellow\n(c)Blue\n";
 
     //Tabel over svarene på spørgsmållene.
-    UI[] questions = {
-            new UI(q1, "a"),
-            new UI(q2, "b")
+    Question[] questions = {
+            new Question(q1, "a"),
+            new Question(q2, "b")
 
     };
     takeTest(questions);
@@ -29,7 +29,7 @@ public class TestSystem extends PApplet {
 }
 
 
-    public static void takeTest(UI [] questions) {
+    public static void takeTest(Question[] questions) {
     int result=0;
     Scanner keyboardtext = new Scanner(System.in);
     for(int i = 0; i < questions.length; i++) {
@@ -53,8 +53,8 @@ System.out.println("Your result " + result + "/" + questions.length);
 
 
         fL = new FileLoader(this);
-       fL.tableData();
-        UI library= new UI(this);
+        fL.tableData();
+        Question library= new Question(this);
 
 cp5.addButton("logOn")
 

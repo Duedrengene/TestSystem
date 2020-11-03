@@ -30,7 +30,42 @@ FileLoader(PApplet p){
             String id = row.getString("ID");
 
         }
-        p.saveTable(table,"resources/new.csv");
+
     }
+
+    boolean checkPassword(String username,String password){
+    boolean result = false;
+    Table table = new Table();
+    table = p.loadTable("resources//Dataen.csv","header,csv");
+
+        for (TableRow row : table.rows()) {
+
+            if(row.getString("Username").equals(username)){
+                if(row.getString("Password").equals(password))
+                result = true;
+            }
+
+        }
+
+    return result;
+    }
+
+    void changeScore(String username,int score){
+        boolean result = false;
+        Table table = new Table();
+        table = p.loadTable("resources//Dataen.csv","header,csv");
+
+        for (TableRow row : table.rows()) {
+
+            if(row.getString("Username").equals(username)){
+                row.setInt("Score",score);
+
+            }
+            p.saveTable(table,"resources/new.csv");
+        }
+
+
+    }
+
 
 }
