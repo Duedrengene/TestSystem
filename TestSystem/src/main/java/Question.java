@@ -10,12 +10,15 @@ String answer;
 
 public Question(PApplet p){
  this.p = p;
- this.prompt = prompt;
- this.answer = answer;
+
 }
 
 
- public Question(String q2, String b) {
+ public Question( String q2, String b) {
+  this.prompt = q2;
+  this.answer = b;
+
+
  }
 
 

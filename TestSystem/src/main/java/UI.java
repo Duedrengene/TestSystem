@@ -9,6 +9,7 @@ ControlP5 cp5;
 UI(ControlP5 cp5){
     this.cp5 = cp5;
 
+
 }
 
     int screen0() {
@@ -57,7 +58,9 @@ public void draw() {
 }
 
          void logOn() {
+
          input = cp5.get(Textfield.class,"Brugernavn").getText();
+            // cp5.get(Textfield.class, "Brugernavn").clear();//Renser tekstfelt efter trykket
 
 
         }
