@@ -3,13 +3,13 @@ import controlP5.Textfield;
 import controlP5.*;
 
 public class UI {
-
+String input;
     ControlP5 cp5;
     float n;
 
 
 
-}
+
 
     UI(ControlP5 cp5) {
         this.cp5 = cp5;
@@ -65,17 +65,6 @@ public void draw() {
 
 }
 
-         void logOn() {
-
-         input = cp5.get(Textfield.class,"Brugernavn").getText();
-            // cp5.get(Textfield.class, "Brugernavn").clear();//Renser tekstfelt efter trykket
-
-
-
-    public void controlEvent(ControlEvent theEvent) {
-        System.out.println(theEvent.getController().getName());
-        n = 0;
-    }
 
 
 

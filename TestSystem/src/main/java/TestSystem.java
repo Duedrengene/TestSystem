@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class TestSystem extends PApplet {
     String input;
-
+    String passwordinput;
     FileLoader fL;
     DisplayClass display;
     UI uI;
@@ -61,20 +61,28 @@ public class TestSystem extends PApplet {
         fL = new FileLoader(this);
         fL.tableData();
         Question library = new Question(this);
-        this.display= new DisplayClass(uI);
+        this.display = new DisplayClass(uI);
     }
 
 
-    public void draw(){
-
-
+    public void draw() {
+display.display();
 
     }
 
     public void logOn() {
-        
+
         input = cp5.get(Textfield.class, "fornavn").getText();
-        System.out.println(input);
-        cp5.get(Textfield.class, "fornavn").clear();
+        passwordinput = cp5.get(Textfield.class, "Password").getText();
+        if (fL.checkPassword(input, passwordinput)){
+
+            println("Stinke");
+            display.screen++;
+    }
+       else
+           cp5.get(Textfield.class, "Password").clear();
+
+
+
     }
 }
