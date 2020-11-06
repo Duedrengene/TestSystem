@@ -3,27 +3,32 @@ import processing.data.StringList;
 import processing.data.Table;
 import processing.data.TableRow;
 
+import java.util.ArrayList;
+
 
 public class FileHandler {
+    ArrayList<String> students= new ArrayList<>();
+    Table table;
 PApplet p;
 FileHandler(PApplet p){
     this.p = p;
-
+    table = new Table();
+    table = p.loadTable("resources//Dataen.csv","header,csv");
 
 }
 
 
  
     void tableData() {
-        Table table = new Table();
 
-        table = p.loadTable("resources//Dataen.csv","header,csv");
+
         System.out.println(table);
         p.println(table.getColumnTitle(0) + " total rows in table");
         for (TableRow row : table.rows()) {
        //     row.setString("Fornavn","Mathias ");
             String fornavn = row.getString("Fornavn");
             String efternavn = row.getString("Efternavn");
+            students.add(fornavn +" "+efternavn);
             p.println(row);
             p.println(fornavn + efternavn);
 
@@ -49,6 +54,18 @@ FileHandler(PApplet p){
 
     return result;
     }
+
+
+     boolean checkType(String userName){
+
+    boolean result = true;//true = elev, false =Lærer
+
+         for (TableRow row : table.rows())
+             if(row.getString("Type").equals("Lærer")&&row.getString("Username").equals(userName))
+                 result = false;
+    return result;
+    }
+
 
     void changeScore(String username,int score){
         boolean result = false;
