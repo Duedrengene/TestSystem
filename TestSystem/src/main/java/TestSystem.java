@@ -81,7 +81,9 @@ display.display();
 
         passwordinput = cp5.get(Textfield.class, "Password").getText();
         if (fL.checkPassword(input, passwordinput)){
-
+            cp5.remove("fornavn");
+            cp5.remove("Password");
+            cp5.remove("logOn");
             println("Stinke");
             display.screen++;
     }
