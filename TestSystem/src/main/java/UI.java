@@ -9,8 +9,6 @@ String input;
 
 
 
-
-
     UI(ControlP5 cp5) {
         this.cp5 = cp5;
 
@@ -61,9 +59,7 @@ String input;
     }
 
 
-public void draw() {
 
-}
 
 
 

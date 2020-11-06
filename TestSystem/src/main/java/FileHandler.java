@@ -4,9 +4,9 @@ import processing.data.Table;
 import processing.data.TableRow;
 
 
-public class FileLoader {
+public class FileHandler {
 PApplet p;
-FileLoader(PApplet p){
+FileHandler(PApplet p){
     this.p = p;
 
 
