@@ -8,7 +8,7 @@ public class TestSystem extends PApplet {
     String input;
 
     FileLoader fL;
-
+    DisplayClass display;
     UI uI;
     ControlP5 cp5;
 
@@ -54,10 +54,27 @@ public class TestSystem extends PApplet {
         cp5 = new ControlP5(this);
         uI = new UI(cp5);
 
+
         uI.logonobject();
+
 
         fL = new FileLoader(this);
         fL.tableData();
         Question library = new Question(this);
+        this.display= new DisplayClass(uI);
+    }
+
+
+    public void draw(){
+
+
+
+    }
+
+    public void logOn() {
+        
+        input = cp5.get(Textfield.class, "fornavn").getText();
+        System.out.println(input);
+        cp5.get(Textfield.class, "fornavn").clear();
     }
 }
