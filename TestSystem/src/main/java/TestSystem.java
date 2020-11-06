@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TestSystem extends PApplet {
     String input;
 
-    FileLoader fL;
+    FileHandler fL;
     DisplayClass display;
     UI uI;
     ControlP5 cp5;
@@ -58,7 +58,7 @@ public class TestSystem extends PApplet {
         uI.logonobject();
 
 
-        fL = new FileLoader(this);
+        fL = new FileHandler(this);
         fL.tableData();
         Question library = new Question(this);
         this.display= new DisplayClass(uI);
@@ -72,9 +72,9 @@ public class TestSystem extends PApplet {
     }
 
     public void logOn() {
-        
+
         input = cp5.get(Textfield.class, "fornavn").getText();
         System.out.println(input);
-        cp5.get(Textfield.class, "fornavn").clear();
+
     }
 }
