@@ -49,6 +49,7 @@ System.out.println("Your result " + result + "/" + questions.length);
     }
 
     public void setup() {
+
         cp5 = new ControlP5(this);
 
 

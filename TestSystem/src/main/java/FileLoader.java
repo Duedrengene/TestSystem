@@ -57,6 +57,8 @@ FileLoader(PApplet p){
 
         for (TableRow row : table.rows()) {
 
+
+
             if(row.getString("Username").equals(username)){
                 row.setInt("Score",score);
 
