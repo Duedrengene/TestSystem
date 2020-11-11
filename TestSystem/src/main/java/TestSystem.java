@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 public class TestSystem extends PApplet {
     String input;
-boolean change = false;
+    boolean change = false;
     String passwordinput;
-  
 
-String userName;
+
+    String userName;
     FileHandler fH;
     int screen = 0;
     DisplayClass display;
@@ -66,40 +66,37 @@ String userName;
         fH = new FileHandler(this);
         fH.tableData();
         Question library = new Question(this);
-        this.display = new DisplayClass(uI,cp5);
+        this.display = new DisplayClass(uI, cp5);
     }
 
 
     public void draw() {
-background(122);
-        change =display.changeScreen(screen,change,fH.checkType(userName));
+        background(122);
+        change = display.changeScreen(screen, change, fH.checkType(userName));
 
     }
 
     public void logOn() {
 
         input = cp5.get(Textfield.class, "fornavn").getText();
-userName = input;
+        userName = input;
         passwordinput = cp5.get(Textfield.class, "Password").getText();
 
-        if (fL.checkPassword(input, passwordinput)){
-            cp5.remove("fornavn");
-            cp5.remove("Password");
-            cp5.remove("logOn");
 
-        if (fH.checkPassword(input, passwordinput)){
+            if (fH.checkPassword(input, passwordinput)) {
+
+                cp5.remove("fornavn");
+                cp5.remove("Password");
+                cp5.remove("logOn");
+
+                println("Stinke");
+                screen++;
+                change = true;
+
+            } else
+                cp5.get(Textfield.class, "Password").clear();
 
 
-            println("Stinke");
-            screen ++;
-           change = true;
-
+        }
     }
-       else
-           cp5.get(Textfield.class, "Password").clear();
 
-
-
-
-    }
-}

@@ -9,7 +9,7 @@ public class DisplayClass {
     UI uI;
     FileHandler fH;
 
-    DisplayClass(UI uI,ControlP5 cp5,FileHandler fH){
+    DisplayClass(UI uI, ControlP5 cp5){
         this.uI = uI;
         this.cp5 = cp5;
         this.fH = fH;
