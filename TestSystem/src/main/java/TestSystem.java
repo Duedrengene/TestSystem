@@ -66,7 +66,10 @@ public class TestSystem extends PApplet {
         fH = new FileHandler(this);
         fH.tableData();
         Question library = new Question(this);
+
         this.display = new DisplayClass(uI, cp5);
+        this.display = new DisplayClass(uI, cp5, fH);
+
     }
 
 
@@ -83,11 +86,15 @@ public class TestSystem extends PApplet {
         passwordinput = cp5.get(Textfield.class, "Password").getText();
 
 
-            if (fH.checkPassword(input, passwordinput)) {
 
-                cp5.remove("fornavn");
-                cp5.remove("Password");
-                cp5.remove("logOn");
+
+          
+
+            if (fH.checkPassword(input, passwordinput)) {
+            cp5.remove("fornavn");
+            cp5.remove("Password");
+            cp5.remove("logOn");
+
 
                 println("Stinke");
                 screen++;
@@ -99,4 +106,6 @@ public class TestSystem extends PApplet {
 
         }
     }
+
+}
 
