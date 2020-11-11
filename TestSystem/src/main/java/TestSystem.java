@@ -67,8 +67,7 @@ public class TestSystem extends PApplet {
         fH.tableData();
         Question library = new Question(this);
 
-        this.display = new DisplayClass(uI, cp5);
-        this.display = new DisplayClass(uI, cp5);
+        display = new DisplayClass(uI, cp5,fH);
 
     }
 
@@ -76,6 +75,11 @@ public class TestSystem extends PApplet {
     public void draw() {
         background(122);
         change = display.changeScreen(screen, change, fH.checkType(userName));
+
+    }
+
+    public void student(int n){
+println(n);
 
     }
 
