@@ -68,7 +68,7 @@ public class TestSystem extends PApplet {
         Question library = new Question(this);
 
         this.display = new DisplayClass(uI, cp5);
-        this.display = new DisplayClass(uI, cp5, fH);
+        this.display = new DisplayClass(uI, cp5);
 
     }
 
@@ -107,5 +107,5 @@ public class TestSystem extends PApplet {
         }
     }
 
-}
+
 
