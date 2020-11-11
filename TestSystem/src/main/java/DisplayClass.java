@@ -1,9 +1,6 @@
 import controlP5.ControlP5;
 
-import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class DisplayClass {
 
@@ -32,15 +29,15 @@ if(change) {
     cp5.remove("Password");
     cp5.remove("logOn");
     if(!isStudent){
-        for(int i =2; i<fH.students.size();i++) {
-
-students.add(fH.students.get(i));
+        for(int i = 2; i<fH.user.size(); i++) {
+if(fh.s)
+students.add(fH.user.get(i));
 
         }
 
         cp5.addScrollableList("student")
                 .setPosition(100, 100)
-                .setSize(200, 100)
+                .setSize(200, 300)
                 .setBarHeight(20)
                 .setItemHeight(20)
                 .addItems(students);

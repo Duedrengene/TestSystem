@@ -1,5 +1,4 @@
 import processing.core.PApplet;
-import processing.data.StringList;
 import processing.data.Table;
 import processing.data.TableRow;
 
@@ -7,7 +6,8 @@ import java.util.ArrayList;
 
 
 public class FileHandler {
-    ArrayList<String> students= new ArrayList<>();
+    ArrayList<String> user = new ArrayList<>();
+    ArrayList<String> students = new ArrayList<>();
     Table table;
 PApplet p;
 FileHandler(PApplet p){
@@ -28,7 +28,7 @@ FileHandler(PApplet p){
        //     row.setString("Fornavn","Mathias ");
             String fornavn = row.getString("Fornavn");
             String efternavn = row.getString("Efternavn");
-            students.add(fornavn +" "+efternavn);
+            user.add(fornavn +" "+efternavn);
             p.println(row);
             p.println(fornavn + efternavn);
 
