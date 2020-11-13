@@ -30,6 +30,8 @@ FileHandler(PApplet p){
             String efternavn = row.getString("Efternavn");
             String type = row.getString("Type");
             user.add(fornavn +" "+efternavn);
+            if(type.equals("Elev"))
+                students.add(fornavn +" "+efternavn);
             p.println(row);
             p.println(fornavn + efternavn);
 
