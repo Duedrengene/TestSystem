@@ -10,14 +10,16 @@ public class DisplayClass {
 PApplet p;
     UI uI;
     FileHandler fH;
+    Question question;
+
     ArrayList<String> students = new ArrayList<>();
 
 
-    DisplayClass(UI uI, ControlP5 cp5,FileHandler fH, PApplet p){
+    DisplayClass(UI uI, ControlP5 cp5, FileHandler fH, UI p){
         this.uI = uI;
         this.cp5 = cp5;
         this.fH = fH;
-        this.p = p;
+        //this.p = p;
         this.buttonheight = uI.buttonheight;
         this.buttonwidth = uI.buttonwidth;
 
@@ -47,27 +49,28 @@ if(change) {
                 .setBarHeight(20)
                 .setItemHeight(20)
                 .addItems(students);
-    }
-}else {
-    if(isStudent) {
+    }else {
+
+        //p.text()
         cp5.addButton("answer1")
                 .setPosition(buttonwidth-600,buttonheight-150)
                 .setSize(400,250)
-                ;
+        ;
         cp5.addButton("answer2")
-.setPosition(buttonwidth-600,buttonheight+150)
-.setSize(400,250)
-;
+                .setPosition(buttonwidth-600,buttonheight+150)
+                .setSize(400,250)
+        ;
         cp5.addButton("answer3")
                 .setPosition(buttonwidth+150,buttonheight-150)
                 .setSize(400,250)
-                ;
+        ;
         cp5.addButton("answer4")
                 .setPosition(buttonwidth+150,buttonheight+150)
                 .setSize(400,250)
-                ;
+        ;
     }
 }
+
 
         }break;
 

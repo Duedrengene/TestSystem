@@ -67,7 +67,7 @@ public class TestSystem extends PApplet {
         fH.tableData();
         Question library = new Question(this);
 
-        display = new DisplayClass(uI, cp5,fH, uI.p);
+        display = new DisplayClass(uI, cp5,fH, uI);
 
     }
 
@@ -109,7 +109,21 @@ println(n);
 
 
         }
-    }
+        public void answer1() {
+        println("du lugter meget");
+        text("du lugter lidt",200,200);
+        }
+        public void answer2() {
+        text("u stinky",200,400);
+        }
+        public void answer3() {
+            text("omega stink", 300, 300);
+        }
+        public  void answer4() {
+            text("beck stinker",400,500);
+            }
+        }
+
 
 
 
