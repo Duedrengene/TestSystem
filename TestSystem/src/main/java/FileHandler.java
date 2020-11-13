@@ -59,14 +59,16 @@ FileHandler(PApplet p){
     }
 
 
-     boolean checkType(String userName){
+     boolean checkType(String userName) {
 
-    boolean result = true;//true = elev, false =Lærer
+         boolean result = true;//true = elev, false =Lærer
 
          for (TableRow row : table.rows())
-             if(row.getString("Type").equals("Lærer")&&row.getString("Username").equals(userName))
+             if (row.getString("Type").equals("Lærer") && row.getString("Username").equals(userName))
                  result = false;
-    return result;
+         return result;
+
+
     }
 
 

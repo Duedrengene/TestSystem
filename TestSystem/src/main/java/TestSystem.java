@@ -67,7 +67,7 @@ public class TestSystem extends PApplet {
         fH.tableData();
         Question library = new Question(this);
 
-        display = new DisplayClass(uI, cp5,fH);
+        display = new DisplayClass(uI, cp5,fH, uI.p);
 
     }
 
