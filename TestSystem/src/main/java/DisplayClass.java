@@ -1,5 +1,5 @@
 import controlP5.ControlP5;
-
+import processing.core.PApplet;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ import java.util.List;
 public class DisplayClass {
 
     ControlP5 cp5;
-    int screen = 0;
+PApplet p;
     UI uI;
     FileHandler fH;
     ArrayList<String> students = new ArrayList<>();
@@ -18,6 +18,7 @@ public class DisplayClass {
         this.uI = uI;
         this.cp5 = cp5;
         this.fH = fH;
+        this.p = p;
     }
 boolean changeScreen(int screen, boolean change,boolean isStudent){
     switch (screen) {
@@ -39,8 +40,8 @@ students.add(fH.students.get(i));
         }
 
         cp5.addScrollableList("student")
-                .setPosition(100, 100)
-                .setSize(200, 100)
+                .setPosition(50, 100)
+                .setSize(200, 300)
                 .setBarHeight(20)
                 .setItemHeight(20)
                 .addItems(students);

@@ -50,14 +50,14 @@ public class TestSystem extends PApplet {
 
     @Override
     public void settings() {
-        size(1000, 500);
+        size(1920, 1080);
 
     }
 
     public void setup() {
 
         cp5 = new ControlP5(this);
-        uI = new UI(cp5);
+        uI = new UI(cp5,this);
 
 
         uI.logonobject();
