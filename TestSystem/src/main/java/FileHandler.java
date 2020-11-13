@@ -34,7 +34,8 @@ FileHandler(PApplet p){
             String score1 = row.getString("Score");
             String score2 = row.getString("Score2");
             String score3 = row.getString("Score3");
-            users.add(new Users(fornavn, efternavn,type,username, password,score1,score2,score3));
+
+            users.add(new Users(fornavn, efternavn,username, password,type,score1,score2,score3));
 
 //            p.println(row);
   //          p.println(fornavn + efternavn);

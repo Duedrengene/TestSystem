@@ -11,7 +11,7 @@ public class Users {
     String fullName;
 
 
-    Users(String firstName,String lastName,String type,String score1,String score2,String score3,String username,String password){
+    Users(String firstName,String lastName,String username,String password, String type, String score1,String score2,String score3){
         this.firstName = firstName;
         this.lastName = lastName;
         this.type = type;

@@ -25,6 +25,12 @@ if (n!= -1) {
     String score1 = fH.students.get(n).score1;
     String score2 = fH.students.get(n).score2;
     String score3 = fH.students.get(n).score3;
+
+    p.textSize(20);
+
+    p.text("Score1", p.width/2 - 100, 150);
+    p.text("Score2", p.width/2, 150);
+    p.text("Score3", p.width/2 + 100, 150);
     p.text(score1, p.width/2 - 100, 200);
     p.text(score2, p.width/2, 200);
     p.text(score3, p.width/2 + 100, 200);
