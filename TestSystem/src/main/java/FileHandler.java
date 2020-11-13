@@ -28,6 +28,7 @@ FileHandler(PApplet p){
        //     row.setString("Fornavn","Mathias ");
             String fornavn = row.getString("Fornavn");
             String efternavn = row.getString("Efternavn");
+            String type = row.getString("Type");
             user.add(fornavn +" "+efternavn);
             p.println(row);
             p.println(fornavn + efternavn);

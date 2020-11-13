@@ -29,9 +29,8 @@ if(change) {
     cp5.remove("Password");
     cp5.remove("logOn");
     if(!isStudent){
-        for(int i = 2; i<fH.user.size(); i++) {
-if(fh.s)
-students.add(fH.user.get(i));
+        for(int i = 2; i<fH.students.size(); i++) {
+students.add(fH.students.get(i));
 
         }
 
