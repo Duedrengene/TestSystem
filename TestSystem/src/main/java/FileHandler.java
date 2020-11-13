@@ -6,8 +6,8 @@ import java.util.ArrayList;
 
 
 public class FileHandler {
-    ArrayList<String> user = new ArrayList<>();
-    ArrayList<String> students = new ArrayList<>();
+    ArrayList<Users> users = new ArrayList<>();
+    ArrayList<Users> students = new ArrayList<>();
     Table table;
 PApplet p;
 FileHandler(PApplet p){
@@ -26,16 +26,28 @@ FileHandler(PApplet p){
         p.println(table.getColumnTitle(0) + " total rows in table");
         for (TableRow row : table.rows()) {
        //     row.setString("Fornavn","Mathias ");
+            String username = row.getString("Username");
+            String password = row.getString("Password");
             String fornavn = row.getString("Fornavn");
             String efternavn = row.getString("Efternavn");
             String type = row.getString("Type");
-            user.add(fornavn +" "+efternavn);
-            if(type.equals("Elev"))
-                students.add(fornavn +" "+efternavn);
-            p.println(row);
-            p.println(fornavn + efternavn);
+            String score1 = row.getString("Score");
+            String score2 = row.getString("Score2");
+            String score3 = row.getString("Score3");
+            users.add(new Users(fornavn, efternavn,type,username, password,score1,score2,score3));
 
-            String id = row.getString("ID");
+//            p.println(row);
+  //          p.println(fornavn + efternavn);
+
+        }
+
+        for(int i = 0;users.size()>i;i++){
+
+            if(users.get(i).type.equals("Elev")){
+                students.add(users.get(i));
+
+
+            }
 
         }
 
