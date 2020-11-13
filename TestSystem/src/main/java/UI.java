@@ -29,13 +29,13 @@ String input;
         ;
         cp5.addTextfield("fornavn")
                 .setCaptionLabel("fornavn")
-                .setPosition(buttonwidth-141, buttonheight-150)
+                .setPosition(buttonwidth-141, buttonheight-250)
                 .setSize(282, 62)
                 .setAutoClear(false)
         ;
         cp5.addTextfield("Password")
                 .setCaptionLabel("Password")
-                .setPosition(buttonwidth-141, buttonheight-250)
+                .setPosition(buttonwidth-141, buttonheight-150)
                 .setSize(282, 62)
                 .setAutoClear(false)
         ;
