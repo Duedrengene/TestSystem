@@ -78,10 +78,13 @@ public class TestSystem extends PApplet {
         background(122);
         change = display.changeScreen(screen, change, fH.checkType(userName));
 display.display();
+display.studentTest();
     }
 
     public void student(int n){
  display.n = n;
+
+
     }
 
     public void logOn() {
@@ -89,11 +92,6 @@ display.display();
         input = cp5.get(Textfield.class, "fornavn").getText();
         userName = input;
         passwordinput = cp5.get(Textfield.class, "Password").getText();
-
-
-
-
-          
 
             if (fH.checkPassword(input, passwordinput)) {
             cp5.remove("fornavn");
@@ -111,14 +109,14 @@ display.display();
 
         }
         public void answer1() {
-        println("du lugter meget");
-        text("du lugter lidt",200,200);
+        text("Test",200,200);
         }
         public void answer2() {
         text("u stinky",200,400);
         }
+
         public void answer3() {
-            text("omega stink", 300, 300);
+        text("omega stink", 300, 300);
         }
         public  void answer4() {
             text("beck stinker",400,500);

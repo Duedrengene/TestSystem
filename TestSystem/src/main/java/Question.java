@@ -8,6 +8,7 @@ PApplet p;
 String prompt;
 String answer;
 
+
 public Question(PApplet p){
  this.p = p;
 

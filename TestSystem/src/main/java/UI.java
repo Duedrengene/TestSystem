@@ -5,7 +5,7 @@ import processing.core.PApplet;
 public class UI {
 String input;
     ControlP5 cp5;
-    float n;
+
     PApplet p;
     float buttonwidth;
     float buttonheight;
