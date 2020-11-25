@@ -15,6 +15,7 @@ String c;
 String d;
 
 public Question(PApplet p,int correctAnswer,String prompt,String answer,String a,String b,String c,String d){
+
  this.p = p;
  this.correctAnswer = correctAnswer;
 this.prompt = prompt;

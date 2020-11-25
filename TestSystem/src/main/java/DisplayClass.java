@@ -8,7 +8,7 @@ public class DisplayClass {
     float buttonheight;
     ControlP5 cp5;
 PApplet p;
-    UI uI;
+   // UI uI;
     FileHandler fH;
     Question question;
 
@@ -17,10 +17,12 @@ PApplet p;
     int n = -1;
 
 
+
+
     DisplayClass(UI uI, ControlP5 cp5,FileHandler fH,PApplet p){
 
 
-        this.uI = uI;
+        //this.uI = uI;
         this.cp5 = cp5;
         this.fH = fH;
         //this.p = p;
@@ -43,10 +45,21 @@ if (n!= -1) {
     p.text(score1, p.width/2 - 100, 200);
     p.text(score2, p.width/2, 200);
     p.text(score3, p.width/2 + 100, 200);
+
 }
 
-    }
 
+
+
+    }
+void studentTest(){
+        if(n==-1) {
+            String questiontitel = String.valueOf(question);
+
+
+        }
+
+}
 boolean changeScreen(int screen, boolean change,boolean isStudent){
     switch (screen) {
 
@@ -75,7 +88,7 @@ students.add(fH.students.get(i).fullName);
                 .addItems(students);
     }else {
 
-        //p.text()
+
         cp5.addButton("answer1")
                 .setPosition(buttonwidth-600,buttonheight-150)
                 .setSize(400,250)
@@ -92,6 +105,7 @@ students.add(fH.students.get(i).fullName);
                 .setPosition(buttonwidth+150,buttonheight+150)
                 .setSize(400,250)
         ;
+
     }
 }
 
@@ -107,7 +121,6 @@ students.add(fH.students.get(i).fullName);
 
 
     }
-
 
 
 
