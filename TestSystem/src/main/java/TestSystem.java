@@ -2,6 +2,7 @@
 import controlP5.*;
 import processing.core.*;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestSystem extends PApplet {
@@ -19,7 +20,7 @@ public class TestSystem extends PApplet {
 
     public static void main(String[] args) {
         PApplet.main("TestSystem");
-
+/*
         String q1 = "What Calculation is right? \n" + "(a)Gulerod\n(b)Orange\n(c)Magenta\n";
 
         String q2 = "What rule in Set theory is true?\n" + "(a)Gulerod\n(b)Yellow\n(c)Blue\n";
@@ -31,21 +32,21 @@ public class TestSystem extends PApplet {
 
         };
         takeTest(questions);
-
+*/
     }
 
 
-    public static void takeTest(Question[] questions) {
+    public static void takeTest(ArrayList<Question> questions) {
         int result = 0;
         Scanner keyboardtext = new Scanner(System.in);
-        for (int i = 0; i < questions.length; i++) {
-            println(questions[i].prompt);
+        for (int i = 0; i < questions.size(); i++) {
+            println(questions.get(i).prompt);
             String answer = keyboardtext.nextLine(); // Importeret fra Scanner
-            if (answer.equals(questions[i].answer)) {
+            if (answer.equals(questions.get(i).correctAnswer)) {
                 result++;
             }
         }
-        System.out.println("Your result " + result + "/" + questions.length);
+        System.out.println("Your result " + result + "/" + questions.size());
     }
 
     @Override
@@ -65,7 +66,7 @@ public class TestSystem extends PApplet {
 
         fH = new FileHandler(this);
         fH.tableData();
-        Question library = new Question(this);
+        takeTest(fH.questions);
 
 
         display = new DisplayClass(uI, cp5,fH,this);

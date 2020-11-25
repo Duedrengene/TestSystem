@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class FileHandler {
     ArrayList<Users> users = new ArrayList<>();
     ArrayList<Users> students = new ArrayList<>();
+    ArrayList<Question> questions = new ArrayList<>();
     Table table;
     Table qTable;
 PApplet p;
@@ -54,13 +55,16 @@ FileHandler(PApplet p){
 
         }
         for (TableRow row : qTable.rows()) {
-            String username = row.getString("Username");
-            String password = row.getString("Password");
-            String fornavn = row.getString("Fornavn");
-            String efternavn = row.getString("Efternavn");
+
             String type = row.getString("Type");
-
-
+            String question = row.getString("Question");
+            String answer = row.getString("Answer");
+            String a = row.getString("A");
+            String b = row.getString("B");
+            String c = row.getString("A");
+            String d = row.getString("B");
+            questions.add(new Question(p,answer,question,a,b,c,d));
+        System.out.println(questions.get(0));
         }
 
 
