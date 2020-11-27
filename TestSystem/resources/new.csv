@@ -1,28 +1,29 @@
-Foto,Type,ID,Fornavn,Efternavn,Studieretning,Password,Username
-,Lærer,ajrp,MATHIAS,Petersen,,lol,ajrp476E
-,Lærer,jgj,MATHIAS,Jensen,,lol,jgj522n
-,Elev,L 3c Carbon 01,MATHIAS,Heydenreich,2018/19 L Matematik A - Kemi A,lol,Adam175g
-,Elev,L 3d1 04,MATHIAS,Jacobsen,2018/19 L Matematik A - Programmering B,lol,Alex328x
-,Elev,L 3c Carbon 09,MATHIAS,Nielsen,2018/19 L Matematik A - Kemi A,lol,Bert376l
-,Elev,L 3a 06,MATHIAS,Nygaard,2018/19 L Matematik A - Fysik A,lol,Ceci464D
-,Elev,L 3d1 07,MATHIAS,Petersen,2018/19 L Matematik A - Programmering B,lol,Chris004z
-,Elev,L 3b1 06,MATHIAS,Christensen,2018/19 L Bioteknologi A - Matematik A,lol,Elis708V
-,Elev,L 3c Carbon 13,MATHIAS,Korneliussen,2018/19 L Matematik A - Kemi A,lol,Emil697p
-,Elev,L 3d1 08,MATHIAS,Nørbjerg,2018/19 L Matematik A - Programmering B,lol,Emil104t
-,Elev,L 3c Carbon 15,MATHIAS,Jacobsen,2018/19 L Matematik A - Kemi A,lol,Feli029x
-,Elev,L 3a 11,MATHIAS,Osmark,2018/19 L Matematik A - Fysik A,lol,Fili823Q
-,Elev,L 3b1 10,MATHIAS,Lorentzen,2018/19 L Bioteknologi A - Matematik A,lol,Jess646B
-,Elev,L 3d1 11,MATHIAS,Nielsen,2018/19 L Matematik A - Programmering B,lol,Kaja745N
-,Elev,L 3d1 13,MATHIAS,Kristensen,2018/19 L Matematik A - Programmering B,lol,Luka767d
-,Elev,L 3h 10,MATHIAS,Andersen,2018/19 L Teknologi A - Design B,lol,Mads289s
-,Elev,L 3c Carbon 18,MATHIAS,Schrader,2018/19 L Matematik A - Kemi A,lol,Math380j
-,Elev,L 3d1 14,MATHIAS,Holmberg,2018/19 L Matematik A - Programmering B,lol,Mike749k
-,Elev,L 3d1 15,MATHIAS,Moussa,2018/19 L Matematik A - Programmering B,lol,Moha695m
-,Elev,L 3c Carbon 21,MATHIAS,Bülow,2018/19 L Matematik A - Kemi A,lol,Nico603L
-,Elev,L 3d1 17,MATHIAS,Johansen,2018/19 L Matematik A - Programmering B,lol,Nika540T
-,Elev,L 3ak 20,MATHIAS,Troelsen,2018/19 L Matematik A - Fysik A,lol,Oska660N
-,Elev,L 3a 20,MATHIAS,Andersen,2018/19 L Matematik A - Fysik A,lol,Simo994R
-,Elev,L 3ak 23,MATHIAS,Skipper,2018/19 L Matematik A - Fysik A,lol,Thor518q
-,Elev,L 3ak 24,MATHIAS,Breüner,2018/19 L Matematik A - Fysik A,lol,Tore415H
-,Elev,L 3d1 21,MATHIAS,Brandt,2018/19 L Matematik A - Programmering B,lol,Vald435P
-,Elev,L 3c Carbon 28,MATHIAS,Lund,2018/19 L Matematik A - Kemi A,lol,Vill567T
+Foto,Type,ID,Fornavn,Efternavn,Studieretning,Password,Username,Score,Score2,Score3
+,Lærer,ajrp,"Anders Juul Refslund ",Petersen,,Andersercool,ajrp,,,
+,Lærer,jgj,"John Gerhard ",Jensen,,Johnercool,jgj,,,
+,Elev,L 3c Carbon 01,"Adam Georg Eken ",Heydenreich,2018/19 L Matematik A - Kemi A,VsC9RaX,Adam175g,,,
+,Elev,L 3d1 04,"Alexander Thorsgaard ",Jacobsen,2018/19 L Matematik A - Programmering B,r6Fjk5g,Alex328x,,,
+,Elev,L 3c Carbon 09,"Bertil Hoffmann Møller ",Nielsen,2018/19 L Matematik A - Kemi A,CZAgu2r,Bert376l,,,
+,Elev,L 3a 06,"Cecilia Gottschalk ",Nygaard,2018/19 L Matematik A - Fysik A,GeX9yvn,Ceci464D,,,
+,Elev,L 3d1 07,"Christian Vedel ",Petersen,2018/19 L Matematik A - Programmering B,7EZ7NvF,Chris004z,,,
+,Elev,L 3b1 06,"Elisabeth Astrup ",Christensen,2018/19 L Bioteknologi A - Matematik A,5xMdm4A,Elis708V,,,
+,Elev,L 3c Carbon 13,"Emil Beck Aagaard ",Korneliussen,2018/19 L Matematik A - Kemi A,YU8jXQr,Emil697p,,,
+,Elev,L 3d1 08,"Emil Boesgaard ",Nørbjerg,2018/19 L Matematik A - Programmering B,x3cdQYn,Emil104t,,,
+,Elev,L 3c Carbon 15,"Felix Falck ",Jacobsen,2018/19 L Matematik A - Kemi A,9HBkJMj,Feli029x,,,
+,Elev,L 3a 11,"Filip Kikkenborg ",Osmark,2018/19 L Matematik A - Fysik A,q6S65S8,Fili823Q,,,
+,Elev,L 3b1 10,"Jessie Klang ",Lorentzen,2018/19 L Bioteknologi A - Matematik A,3fu5gDc,Jess646B,,,
+,Elev,L 3d1 11,"Kaja Thilde ",Nielsen,2018/19 L Matematik A - Programmering B,WA7ESgJ,Kaja745N,,,
+,Elev,L 3d1 13,"Lukas Mansa ",Kristensen,2018/19 L Matematik A - Programmering B,fy3VHHe,Luka767d,,,
+,Elev,L 3h 10,"Mads Emil ",Andersen,2018/19 L Teknologi A - Design B,KJ28uwq,Mads289s,,,
+,Elev,L 3c Carbon 18,"Mathias Alexander Friis ",Schrader,2018/19 L Matematik A - Kemi A,admin,Math380j,,,
+,Elev,L 3d1 14,"Mike Hakmann ",Holmberg,2018/19 L Matematik A - Programmering B,MTj3SX9,Mike749k,,,
+,Elev,L 3d1 15,"Mohammad Marwan El-Haj ",Moussa,2018/19 L Matematik A - Programmering B,rM9PBjk,Moha695m,,,
+,Elev,L 3c Carbon 21,"Nicoline Mejlgren von ",Bülow,2018/19 L Matematik A - Kemi A,DryK8Kx,Nico603L,,,
+,Elev,L 3d1 17,"Niklas Netterstrøm ",Johansen,2018/19 L Matematik A - Programmering B,HQ7tnsR,Nika540T,,,
+,Elev,L 3ak 20,"Oskar Lanng ",Troelsen,2018/19 L Matematik A - Fysik A,8fw3BXy,Oska660N,,,
+,Elev,L 3a 20,"Simon Lykke ",Andersen,2018/19 L Matematik A - Fysik A,JE6pEFt,Simo994R,,,
+,Elev,L 3ak 23,"Thor Frøding ",Skipper,2018/19 L Matematik A - Fysik A,wb4eWBg,Thor518q,,,
+,Elev,L 3ak 24,"Tore Sebastian ",Breüner,2018/19 L Matematik A - Fysik A,Bx2GCFC,Tore415H,,,
+,Elev,L 3d1 21,"Valdemar ",Brandt,2018/19 L Matematik A - Programmering B,mAD6Ztw,Vald435P,,,
+,Elev,L 3c Carbon 28,"Villads Asger ",Lund,2018/19 L Matematik A - Kemi A,Y3nMMgg,Vill567T,,,
+,Elev,L 3c Carbon 29,"Michael ",Mega Cool,2018/19 L Matematik A - Kemi A,lol,mic,3,,

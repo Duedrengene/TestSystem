@@ -1,10 +1,13 @@
 import controlP5.ControlP5;
 import processing.core.PApplet;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Quiz {
 boolean change = true;
+FileHandler fH;
+int questionType;
 int score;
     PApplet p;
     ArrayList<Question> activeQuestions =new ArrayList<>();
@@ -20,8 +23,8 @@ int score;
     UI uI;
 
 
-    Quiz(ArrayList<Question> questions, UI uI,PApplet p){
-
+    Quiz(ArrayList<Question> questions, UI uI, FileHandler fH, PApplet p){
+this.fH = fH;
         this.uI=uI;
         this.questions = questions;
         this.p = p;
@@ -74,9 +77,9 @@ int score;
 
     switch(quizType){
 
-        case 1: activeQuestions = questions1;break;
-        case 2:activeQuestions = questions2;break;
-        case 3:activeQuestions = questions3;break;
+        case 1: activeQuestions = questions1; questionType=1;break;
+        case 2:activeQuestions = questions2;questionType=2;break;
+        case 3:activeQuestions = questions3;questionType=3;break;
 
 
     }
@@ -108,7 +111,7 @@ if(activeQuestions.size()>i) {
         uI.removeQuizOptions();
     change = false;
 
-
+fH.changeScore(score,questionType);
     }
     if(score != activeQuestions.size())
     p.text("Du fik "+score +" point ud af"+activeQuestions.size()+" bedre held næste gang", p.width/2,200);

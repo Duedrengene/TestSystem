@@ -11,6 +11,7 @@ public class FileHandler {
     ArrayList<Question> questions = new ArrayList<>();
     Table table;
     Table qTable;
+    String userName;
 PApplet p;
 FileHandler(PApplet p){
     this.p = p;
@@ -72,6 +73,7 @@ FileHandler(PApplet p){
     }
 
     boolean checkPassword(String username,String password){
+    userName = username;
     boolean result = false;
     Table table = new Table();
     table = p.loadTable("resources//Dataen.csv","header,csv");
@@ -102,7 +104,7 @@ FileHandler(PApplet p){
     }
 
 
-    void changeScore(String username,int score){
+    void changeScore(int score,int scoreType){
         boolean result = false;
         Table table = new Table();
         table = p.loadTable("resources//Dataen.csv","header,csv");
@@ -111,11 +113,16 @@ FileHandler(PApplet p){
 
 
 
-            if(row.getString("Username").equals(username)){
+            if(row.getString("Username").equals(userName)){
+                if(scoreType ==1)
                 row.setInt("Score",score);
+                if(scoreType ==2)
+                row.setInt("Score2",score);
+                if(scoreType ==3)
+                row.setInt("Score3",score);
 
             }
-            p.saveTable(table,"resources/new.csv");
+            p.saveTable(table,"resources/Dataen.csv");
         }
 
 
