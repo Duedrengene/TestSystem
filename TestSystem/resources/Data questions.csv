@@ -1,7 +1,7 @@
 ﻿Type,Question,Answer,A,B,C,D
 Talmængder,Hvilken en stinker?,A,Marco,Mikhail,Marco,Mathias
-Talmængder,Hvilken en af disse mængder er de naturlige tal?,A,{0,1,2,3,4,5,6…},{-3,-2,-1,0,1,2,3,4,5….},Brøktal,{√2,π}
-Talmængder,Hvilken en af disse beskriver naturlige tal, der er ,mindre end 20?,B,{ n ∈ N | n > 20 },{ n ∈ N | n < 20 },{ n ∈ Z | Z < 20 },{ n ∈ Z | Z > 20 }
+Talmængder,Hvilken en af disse mængder er de naturlige tal?,A,{0.1.2.3.4.5.6…},{-3.-2.-1.0.1.2.3.4.5….},Brøktal,{√2.π}
+Talmængder,Hvilken en af disse beskriver naturlige tal der er mindre end 20?,B,{ n ∈ N | n > 20 },{ n ∈ N | n < 20 },{ n ∈ Z | Z < 20 },{ n ∈ Z | Z > 20 }
 Talfølger,Hvad er den generelle løsning til den homogene ligning med 2 rødder?,B,xn+1-xn=0,Xn+2-Xn+1-Xn=0, C * r^n + Dn*r^n ,Yn+1 + C+Dn+2*r
-Talfølger,Bestem talfølgen ud fra disse : 1,4,9,16,25,36….,D,n+2^2,Xn+1^2,xn+x^2,n^2
+Talfølger,Bestem talfølgen ud fra disse : 1;4;9;16;25;36….,D,n+2^2,Xn+1^2,xn+x^2,n^2
 Talfølger,Hvad er den generelle sætning for at finde Xn?,A,Partikulære + homogene ligning,Inhomogene-homogene ligning,Homogene divideret med homogene ligning,Den gennerelle løsning er den partikulære løsning

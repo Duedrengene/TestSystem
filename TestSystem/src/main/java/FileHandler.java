@@ -61,9 +61,9 @@ FileHandler(PApplet p){
             String answer = row.getString("Answer");
             String a = row.getString("A");
             String b = row.getString("B");
-            String c = row.getString("A");
-            String d = row.getString("B");
-            questions.add(new Question(p,answer,question,a,b,c,d));
+            String c = row.getString("C");
+            String d = row.getString("D");
+            questions.add(new Question(p,answer,question,type,a,b,c,d));
         System.out.println(questions.get(0));
         }
 

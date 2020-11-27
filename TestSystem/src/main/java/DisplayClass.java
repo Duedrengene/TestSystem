@@ -8,24 +8,24 @@ public class DisplayClass {
     float buttonheight;
     ControlP5 cp5;
 PApplet p;
-   // UI uI;
+    UI uI;
     FileHandler fH;
-    Question question;
-
     ArrayList<String> students = new ArrayList<>();
-
+    Quiz quiz;
+    int quizSelected = 0;
     int n = -1;
 
 
 
 
-    DisplayClass(UI uI, ControlP5 cp5,FileHandler fH,PApplet p){
+    DisplayClass(UI uI, ControlP5 cp5,FileHandler fH,Quiz quiz,PApplet p){
 
 
-        //this.uI = uI;
+        this.uI = uI;
         this.cp5 = cp5;
         this.fH = fH;
-        //this.p = p;
+        this.p = p;
+        this.quiz=quiz;
         this.buttonheight = uI.buttonheight;
         this.buttonwidth = uI.buttonwidth;
 
@@ -36,15 +36,26 @@ if (n!= -1) {
     String score1 = fH.students.get(n).score1;
     String score2 = fH.students.get(n).score2;
     String score3 = fH.students.get(n).score3;
+    p.textAlign(p.CENTER);
+    if(score1.equals("")){
+        score1 = "Quiz ikke taget";
+    }
+    if(score2.equals("")){
+        score2 = "Quiz ikke taget";
+    }
+    if(score3.equals("")){
+        score3 = "Quiz ikke taget";
+    }
 
     p.textSize(20);
 
-    p.text("Score1", p.width/2 - 100, 150);
+    p.text("Score1", p.width/2 - 300, 150);
     p.text("Score2", p.width/2, 150);
-    p.text("Score3", p.width/2 + 100, 150);
-    p.text(score1, p.width/2 - 100, 200);
+    p.text("Score3", p.width/2 + 300, 150);
+
+    p.text(score1, p.width/2 -300, 200);
     p.text(score2, p.width/2, 200);
-    p.text(score3, p.width/2 + 100, 200);
+    p.text(score3, p.width/2 + 300, 200);
 
 }
 
@@ -52,6 +63,7 @@ if (n!= -1) {
 
 
     }
+    /*
 void studentTest(){
         if(n==-1) {
             String questiontitel = String.valueOf(question);
@@ -59,7 +71,7 @@ void studentTest(){
 
         }
 
-}
+}*/
 boolean changeScreen(int screen, boolean change,boolean isStudent){
     switch (screen) {
 
@@ -69,54 +81,39 @@ boolean changeScreen(int screen, boolean change,boolean isStudent){
 
         case 1:{
 if(change) {
-    cp5.remove("fornavn");
-    cp5.remove("Password");
-    cp5.remove("logOn");
-
     if(!isStudent){
         for(int i = 0; i<fH.students.size(); i++) {
-students.add(fH.students.get(i).fullName);
+            students.add(fH.students.get(i).fullName);
 
         }
-
-        cp5.addScrollableList("student")
-
-                .setPosition(100, 100)
-                .setSize(200, 300)
-                .setBarHeight(20)
-                .setItemHeight(20)
-                .addItems(students);
+   uI.addScrollList(students);
     }else {
 
+        quiz.quizSelect();
 
-        cp5.addButton("answer1")
-                .setPosition(buttonwidth-600,buttonheight-150)
-                .setSize(400,250)
-        ;
-        cp5.addButton("answer2")
-                .setPosition(buttonwidth-600,buttonheight+150)
-                .setSize(400,250)
-        ;
-        cp5.addButton("answer3")
-                .setPosition(buttonwidth+150,buttonheight-150)
-                .setSize(400,250)
-        ;
-        cp5.addButton("answer4")
-                .setPosition(buttonwidth+150,buttonheight+150)
-                .setSize(400,250)
-        ;
 
-    }
 }
 
 
         }break;
 
-        default:break;
+
 
 
 
     }
+        case 3:{
+            if(change) {
+                quiz.startQuiz(quizSelected);
+            }
+
+            quiz.showQuestion();
+        }break;
+        default:break;
+        }
+
+
+
     return false;
 
 

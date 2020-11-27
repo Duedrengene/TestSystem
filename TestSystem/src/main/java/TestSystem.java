@@ -17,6 +17,8 @@ public class TestSystem extends PApplet {
     DisplayClass display;
     UI uI;
     ControlP5 cp5;
+    Quiz quiz;
+
 
     public static void main(String[] args) {
         PApplet.main("TestSystem");
@@ -31,22 +33,23 @@ public class TestSystem extends PApplet {
                 new Question(q2, "b")
 
         };
-        takeTest(questions);
+        takteTest(questions);
 */
     }
 
 
     public static void takeTest(ArrayList<Question> questions) {
+        /*
         int result = 0;
-        Scanner keyboardtext = new Scanner(System.in);
+       // Scanner keyboardtext = new Scanner(System.in);
         for (int i = 0; i < questions.size(); i++) {
             println(questions.get(i).prompt);
-            String answer = keyboardtext.nextLine(); // Importeret fra Scanner
-            if (answer.equals(questions.get(i).correctAnswer)) {
-                result++;
-            }
+          //  String answer = keyboardtext.nextLine(); // Importeret fra Scanner
+           // if (answer.equals(questions.get(i).correctAnswer)) {
+             //   result++;
+            //}
         }
-        System.out.println("Your result " + result + "/" + questions.size());
+        System.out.println("Your result " + result + "/" + questions.size());*/
     }
 
     @Override
@@ -66,12 +69,12 @@ public class TestSystem extends PApplet {
 
         fH = new FileHandler(this);
         fH.tableData();
-        takeTest(fH.questions);
 
 
-        display = new DisplayClass(uI, cp5,fH,this);
+        quiz = new Quiz(fH.questions,uI,this);
+        display = new DisplayClass(uI, cp5,fH,quiz,this);
 
-
+quiz.checkQuestions();
     }
 
 
@@ -79,7 +82,6 @@ public class TestSystem extends PApplet {
         background(122);
         change = display.changeScreen(screen, change, fH.checkType(userName));
 display.display();
-display.studentTest();
     }
 
     public void student(int n){
@@ -109,19 +111,76 @@ display.studentTest();
 
 
         }
-        public void answer1() {
+        public void A() {
         text("Test",200,200);
+        if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("A")){
+
+            quiz.score ++;
+
         }
-        public void answer2() {
+        quiz.i++;
+        quiz.change = true;
+
+
+        }
+        public void B() {
         text("u stinky",200,400);
+            if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("B")){
+
+                quiz.score ++;
+
+            }
+            quiz.i++;
+            quiz.change = true;
+
         }
 
-        public void answer3() {
+        public void C() {
         text("omega stink", 300, 300);
-        }
-        public  void answer4() {
-            text("beck stinker",400,500);
+            if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("C")){
+
+                quiz.score ++;
+
             }
+            quiz.i++;
+            quiz.change = true;
+
+        }
+        public  void D() {
+            text("beck stinker",300,300);
+            if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("D")){
+
+                quiz.score ++;
+
+            }
+            quiz.i++;
+            quiz.change = true;
+
+        }
+
+        public void quiz1(){
+        display.quizSelected = 1;
+        screen=3;
+            change = true;
+
+            println("Bruh");
+        }
+
+        public void quiz2(){
+            display.quizSelected = 2;
+            screen=3;
+            change = true;
+
+
+
+        }
+        public void quiz3(){
+            display.quizSelected = 3;
+            screen=3;
+change = true;
+
+
+        }
         }
 
 
