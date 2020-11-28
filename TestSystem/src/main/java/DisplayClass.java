@@ -17,13 +17,14 @@ PApplet p;
     FileHandler fH;
     ArrayList<String> students = new ArrayList<>();
     Quiz quiz;
+    ImageLoader iL;
     int quizSelected = 0;
     int n = -1;
 
 
 
 
-    DisplayClass(UI uI, ControlP5 cp5,FileHandler fH,Quiz quiz,PApplet p){
+    DisplayClass(UI uI, ControlP5 cp5,FileHandler fH,Quiz quiz, ImageLoader iL,PApplet p){
 
 
         this.uI = uI;
@@ -33,7 +34,7 @@ PApplet p;
         this.quiz=quiz;
         this.buttonheight = uI.buttonheight;
         this.buttonwidth = uI.buttonwidth;
-
+this.iL = iL;
 
 
     }
@@ -83,13 +84,16 @@ void studentTest(){
 
 }*/
 boolean changeScreen(int screen, boolean change,boolean isStudent){
+    p.clear();
+
     switch (screen) {
 
         case 0:{
-
+            p.background(iL.background);
         }break;
 
         case 1:{
+            p.background(122);
 if(change) {
     if(!isStudent){
         for(int i = 0; i<fH.students.size(); i++) {
@@ -114,6 +118,7 @@ if(change) {
 
     }
         case 3:{
+            p.background(122);
             if(change) {
                 quiz.startQuiz(quizSelected);
             }

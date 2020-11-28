@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestSystem extends PApplet {
+
+    ImageLoader iL = new ImageLoader(this);
     String input;
     boolean change = false;
     String passwordinput;
@@ -59,7 +61,7 @@ public class TestSystem extends PApplet {
 
     public void setup() {
 
-
+iL.loadImage();
 
         cp5 = new ControlP5(this);
         uI = new UI(cp5,this);
@@ -73,14 +75,14 @@ public class TestSystem extends PApplet {
 
 
         quiz = new Quiz(fH.questions,uI,fH,this);
-        display = new DisplayClass(uI, cp5,fH,quiz,this);
+        display = new DisplayClass(uI, cp5,fH,quiz,iL,this);
 
 quiz.checkQuestions();
     }
 
 
     public void draw() {
-        background(122);
+
 
         change = display.changeScreen(screen, change, fH.checkType(userName));
 display.display();
