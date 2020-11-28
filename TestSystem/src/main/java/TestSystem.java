@@ -74,7 +74,7 @@ iL.loadImage();
         fH.tableData();
 
 
-        quiz = new Quiz(fH.questions,uI,fH,this);
+        quiz = new Quiz(fH.questions,uI,fH,iL,this);
         display = new DisplayClass(uI, cp5,fH,quiz,iL,this);
 
 quiz.checkQuestions();

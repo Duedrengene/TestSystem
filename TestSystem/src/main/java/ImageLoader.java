@@ -17,7 +17,7 @@ this.p = p;
 
    public void  loadImage(){
 background = p.loadImage("resources//cool.PNG");
-titelfont= p.createFont("resources//Georgia.ttf",32);
+titelfont= p.loadFont("resources//Georgia-25.vlw");
 
             }
 

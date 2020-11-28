@@ -1,6 +1,7 @@
 import controlP5.ControlP5;
 import processing.core.PApplet;
 
+import java.awt.*;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -25,11 +26,12 @@ int score;
     UI uI;
 
 
-    Quiz(ArrayList<Question> questions, UI uI, FileHandler fH, PApplet p){
+    Quiz(ArrayList<Question> questions, UI uI, FileHandler fH, ImageLoader iL, PApplet p){
 this.fH = fH;
         this.uI=uI;
         this.questions = questions;
         this.p = p;
+        this.iL=iL;
     }
 
     public void checkQuestions() {
