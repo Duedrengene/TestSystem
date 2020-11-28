@@ -2,6 +2,7 @@ import controlP5.ControlP5;
 import controlP5.Textfield;
 import controlP5.*;
 import processing.core.PApplet;
+import processing.core.PImage;
 
 import java.util.ArrayList;
 
@@ -19,9 +20,7 @@ String input;
         buttonheight = p.height/2;
 
     }
-
     public void logonobject() {
-
 
         System.out.println("Okay");
 

@@ -10,7 +10,6 @@ public class TestSystem extends PApplet {
     boolean change = false;
     String passwordinput;
 
-
     String userName;
     FileHandler fH;
     int screen = 0;
@@ -60,6 +59,8 @@ public class TestSystem extends PApplet {
 
     public void setup() {
 
+
+
         cp5 = new ControlP5(this);
         uI = new UI(cp5,this);
 
@@ -80,6 +81,7 @@ quiz.checkQuestions();
 
     public void draw() {
         background(122);
+
         change = display.changeScreen(screen, change, fH.checkType(userName));
 display.display();
     }

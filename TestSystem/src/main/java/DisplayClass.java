@@ -1,11 +1,16 @@
 import controlP5.ControlP5;
 import processing.core.PApplet;
+import processing.core.PImage;
+
 import java.io.File;
 import java.util.ArrayList;
 
 public class DisplayClass {
     float buttonwidth;
     float buttonheight;
+
+    
+
     ControlP5 cp5;
 PApplet p;
     UI uI;
@@ -29,9 +34,13 @@ PApplet p;
         this.buttonheight = uI.buttonheight;
         this.buttonwidth = uI.buttonwidth;
 
+
+
     }
 
+
     void display(){
+
 if (n!= -1) {
     String score1 = fH.students.get(n).score1;
     String score2 = fH.students.get(n).score2;
@@ -46,6 +55,7 @@ if (n!= -1) {
     if(score3.equals("")){
         score3 = "Quiz ikke taget";
     }
+
 
     p.textSize(20);
 
@@ -87,6 +97,7 @@ if(change) {
 
         }
    uI.addScrollList(students);
+
     }else {
 
         quiz.quizSelect();
