@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ddf5e24-ec57-4c1c-98eb-dc642c16325f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TestSystem/src/main/java/ImageLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSystem/resources/Dataen.csv" beforeDir="false" afterPath="$PROJECT_DIR$/TestSystem/resources/Dataen.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSystem/src/main/java/DisplayClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestSystem/src/main/java/DisplayClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSystem/src/main/java/TestSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestSystem/src/main/java/TestSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestSystem/DisplayClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestSystem/DisplayClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestSystem/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestSystem/FileHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestSystem/Question.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestSystem/Question.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestSystem/Quiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestSystem/Quiz.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestSystem/TestSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestSystem/TestSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestSystem/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestSystem/UI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestSystem/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestSystem/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestSystem/resources/Data questions.csv" beforeDir="false" afterPath="$PROJECT_DIR$/TestSystem/resources/Data questions.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +76,10 @@
       </list>
     </recent_temporary>
   </component>
+
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -99,6 +91,14 @@
       <option name="presentableId" value="Default" />
       <updated>1603196464741</updated>
     </task>
+    <task id="LOCAL-00001" summary="New CSV">
+      <created>1606602574800</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1606602574800</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="WindowStateProjectService">
@@ -114,10 +114,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604656937967" />
-    <state x="560" y="114" key="CommitChangelistDialog2" timestamp="1606571003545">
+    <state x="560" y="114" key="CommitChangelistDialog2" timestamp="1606602792428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="114" key="CommitChangelistDialog2/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606571003545" />
+    <state x="560" y="114" key="CommitChangelistDialog2/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606602792428" />
     <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1604051873821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,6 +172,10 @@
     </state>
     <state x="440" y="94" key="SettingsEditor/-1920.10.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604051877313" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603456040698" />
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2" timestamp="1606602794488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="241" key="Vcs.Push.Dialog.v2/-1920.8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606602794488" />
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1606569894681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
