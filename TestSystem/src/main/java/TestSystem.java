@@ -21,7 +21,7 @@ public class TestSystem extends PApplet {
 
     public static void main(String[] args) {
         PApplet.main("TestSystem");
-/*
+/* PROTOTYPE::::
         String q1 = "What Calculation is right? \n" + "(a)Gulerod\n(b)Orange\n(c)Magenta\n";
 
         String q2 = "What rule in Set theory is true?\n" + "(a)Gulerod\n(b)Yellow\n(c)Blue\n";
@@ -38,7 +38,7 @@ public class TestSystem extends PApplet {
 
 
     public static void takeTest(ArrayList<Question> questions) {
-        /*
+        /* PROTOTYPE::::
         int result = 0;
        // Scanner keyboardtext = new Scanner(System.in);
         for (int i = 0; i < questions.size(); i++) {
@@ -80,7 +80,7 @@ quiz.checkQuestions();
 
 
     public void draw() {
-        background(122);
+        background(52,107,49);
 
         change = display.changeScreen(screen, change, fH.checkType(userName));
 display.display();
@@ -114,7 +114,7 @@ display.display();
 
         }
         public void A() {
-        text("Test",200,200);
+
         if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("A")){
 
             quiz.score ++;
@@ -126,7 +126,7 @@ display.display();
 
         }
         public void B() {
-        text("u stinky",200,400);
+
             if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("B")){
 
                 quiz.score ++;
@@ -138,7 +138,7 @@ display.display();
         }
 
         public void C() {
-        text("omega stink", 300, 300);
+
             if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("C")){
 
                 quiz.score ++;
@@ -149,7 +149,7 @@ display.display();
 
         }
         public  void D() {
-            text("beck stinker",300,300);
+
             if(quiz.activeQuestions.get(quiz.i).correctAnswer.equals("D")){
 
                 quiz.score ++;
@@ -165,7 +165,7 @@ display.display();
         screen=3;
             change = true;
 
-            println("Bruh");
+
         }
 
         public void quiz2(){

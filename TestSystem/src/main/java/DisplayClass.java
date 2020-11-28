@@ -9,7 +9,7 @@ public class DisplayClass {
     float buttonwidth;
     float buttonheight;
 
-    
+
 
     ControlP5 cp5;
 PApplet p;
