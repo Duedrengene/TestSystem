@@ -9,6 +9,7 @@ boolean change = true;
 FileHandler fH;
 int questionType;
 int score;
+
     PApplet p;
     ArrayList<Question> activeQuestions =new ArrayList<>();
     String type1="Ikke Tilgængelig";
@@ -101,22 +102,30 @@ uI.quizSelect(type1,type2,type3);
     public void showQuestion(){
 if(activeQuestions.size()>i) {
     if(change) {
+
         uI.addQuizOptions(activeQuestions, i);
         change=false;
     }
-    p.text(activeQuestions.get(i).prompt, 1920 / 2, 200);
 
-}else{
+
+    p.textSize(23);
+    p.fill(52,107,49);
+    p.text(activeQuestions.get(i).prompt, 1920 / 2-275, 300);
+
+}else {
     if (change) {
         uI.removeQuizOptions();
-    change = false;
+        change = false;
 
-fH.changeScore(score,questionType);
+        fH.changeScore(score, questionType);
     }
-    if(score != activeQuestions.size())
-    p.text("Du fik "+score +" point ud af"+activeQuestions.size()+" bedre held næste gang", p.width/2,200);
-    else
-    p.text("Du fik "+score +" point ud af"+activeQuestions.size(), p.width/2,200);
+    if (score != activeQuestions.size()) {
+        p.textSize(22);
+        p.text("Du fik " + score + " point ud af" + activeQuestions.size() + " bedre held næste gang", p.width / 2, 200);
+    } else
+            p.textSize(22);
+            p.text("Du fik " + score + " point ud af" + activeQuestions.size(), p.width / 2, 200);
+            p.text("Flot arbejde makker!",p.width/2,150);
 
 }
 
