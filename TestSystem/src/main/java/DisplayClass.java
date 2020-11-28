@@ -58,7 +58,7 @@ if (n!= -1) {
     }
 
 
-    p.textSize(20);
+    p.textSize(22);
 
     p.text("Score1", p.width/2 - 300, 150);
     p.text("Score2", p.width/2, 150);
