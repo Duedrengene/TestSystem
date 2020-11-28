@@ -8,6 +8,7 @@ public class Quiz {
 boolean change = true;
 FileHandler fH;
 int questionType;
+ImageLoader iL;
 int score;
 
     PApplet p;
@@ -108,8 +109,9 @@ if(activeQuestions.size()>i) {
     }
 
 
-    p.textSize(23);
-    p.fill(52,107,49);
+
+
+    p.textFont(iL.titelfont);
     p.text(activeQuestions.get(i).prompt, 1920 / 2-275, 300);
 
 }else {
