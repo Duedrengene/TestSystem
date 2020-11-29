@@ -61,24 +61,24 @@ removeQuizOptions();
 
         cp5.addButton("A")
                 .setPosition(buttonWidth -600, buttonHeight -150)
-                .setSize(400,250)
+                .setSize(500,250)
                 .setLabel(list.get(i).a)
         ;
         cp5.addButton("B")
                 .setPosition(buttonWidth -600, buttonHeight +150)
-                .setSize(400,250)
+                .setSize(500,250)
                 .setLabel(list.get(i).b)
 
         ;
         cp5.addButton("C")
                 .setPosition(buttonWidth +150, buttonHeight -150)
-                .setSize(400,250)
+                .setSize(500,250)
                 .setLabel(list.get(i).c)
 
         ;
         cp5.addButton("D")
                 .setPosition(buttonWidth +150, buttonHeight +150)
-                .setSize(400,250)
+                .setSize(500,250)
                 .setLabel(list.get(i).d)
 
         ;
@@ -150,7 +150,7 @@ removeQuizOptions();
     public void back(){
         cp5.addButton("back")
                 .setPosition(50 , 50)
-                .setSize(50,50)
+                .setSize(100,50)
                 .setLabel("Go Back")
         ;
 

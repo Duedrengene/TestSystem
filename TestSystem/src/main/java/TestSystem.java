@@ -87,7 +87,7 @@ quiz.checkQuestions();
         background(52,107,49);
 
 
-        change = display.changeScreen(screen, change, fH.checkType(userName));
+        change = display.changeScreen(screen, change, fH.checkType(userName),userName);
 display.display();
     }
 

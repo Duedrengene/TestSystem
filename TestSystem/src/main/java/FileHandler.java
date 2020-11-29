@@ -108,12 +108,29 @@ FileHandler(PApplet p){
 
 
             if(row.getString("Username").equals(userName)){
-                if(scoreType ==1)
-                row.setInt("Score",score);
-                if(scoreType ==2)
-                row.setInt("Score2",score);
-                if(scoreType ==3)
-                row.setInt("Score3",score);
+                if(scoreType ==1) {
+                    row.setInt("Score", score);
+                    for(int i = 0; i<students.size(); i++) {
+                        if(students.get(i).username.equals(userName)){
+                            students.get(i).score1 = Integer.toString(score);
+                        }
+                }}
+                if(scoreType ==2) {
+                    row.setInt("Score2", score);
+                    for(int i = 0; i<students.size(); i++) {
+                        if(students.get(i).username.equals(userName)){
+                            students.get(i).score2 = Integer.toString(score);
+                        }
+
+                }}
+                if(scoreType ==3) {
+                    row.setInt("Score3", score);
+                    for(int i = 0; i<students.size(); i++) {
+                        if(students.get(i).username.equals(userName)){
+                            students.get(i).score3 = Integer.toString(score);
+                        }}
+
+                }
 
             }
             p.saveTable(table,"resources/Dataen.csv");

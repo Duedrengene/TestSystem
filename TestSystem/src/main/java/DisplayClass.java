@@ -81,7 +81,7 @@ void studentTest(){
         }
 
 }*/
-boolean changeScreen(int screen, boolean change,boolean isStudent){
+boolean changeScreen(int screen, boolean change,boolean isStudent,String username){
     p.clear();
 
     switch (screen) {
@@ -117,15 +117,32 @@ uI.back();
         uI.back();
 
 }
-
-
-        }break;
-
-
-
-
-
+}
+if(isStudent){
+    String score1 ="Test ikke taget";
+    String score2 = "Test ikke taget";
+    String score3 = "Test ikke taget";
+    for(int i = 0; i<fH.students.size(); i++) {
+if(fH.students.get(i).username.equals(username)){
+if(!fH.students.get(i).score1.equals("") )
+     score1= fH.students.get(i).score1;
+    if(!fH.students.get(i).score2.equals("") )
+     score2= fH.students.get(i).score2;
+    if(!fH.students.get(i).score3.equals("") )
+     score3= fH.students.get(i).score3;
+break;
+}
     }
+    p.textAlign(p.CENTER);
+    p.text("Resultat:"+score1, p.width/2 -500, 500);
+    p.text("Resultat:"+score2, p.width/2, 500);
+    p.text("Resultat:"+score3, p.width/2 + 500, 500);
+}
+
+
+
+
+    }break;
         case 2:{
             p.background(122);
             if(change) {
