@@ -33,7 +33,6 @@ String input;
                 .setPosition(buttonWidth -141, buttonHeight -250)
                 .setSize(282, 62)
                 .setAutoClear(false)
-                .setColorValue(000000)
                 .setColorLabel(000000)
         ;
         cp5.addTextfield("Password")
@@ -41,7 +40,6 @@ String input;
                 .setPosition(buttonWidth -141, buttonHeight -150)
                 .setSize(282, 62)
                 .setAutoClear(false)
-                .setColorValue(000000	)
                 .setColorLabel(000000)
         ;
     }
