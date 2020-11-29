@@ -1,8 +1,6 @@
 import controlP5.ControlP5;
 import processing.core.PApplet;
-import processing.core.PImage;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class DisplayClass {
@@ -12,7 +10,7 @@ public class DisplayClass {
 
 
     ControlP5 cp5;
-PApplet p;
+    PApplet p;
     UI uI;
     FileHandler fH;
     ArrayList<String> students = new ArrayList<>();
@@ -32,10 +30,10 @@ PApplet p;
         this.fH = fH;
         this.p = p;
         this.quiz=quiz;
-        this.buttonheight = uI.buttonheight;
-        this.buttonwidth = uI.buttonwidth;
-this.iL = iL;
-
+        this.buttonheight = uI.buttonHeight;
+        this.buttonwidth = uI.buttonWidth;
+        this.iL = iL;
+        p.textFont(iL.titelFont);
 
     }
 
@@ -58,7 +56,7 @@ if (n!= -1) {
     }
 
 
-    p.textSize(22);
+
 
     p.text("Score1", p.width/2 - 300, 150);
     p.text("Score2", p.width/2, 150);
@@ -89,24 +87,34 @@ boolean changeScreen(int screen, boolean change,boolean isStudent){
     switch (screen) {
 
         case 0:{
-            p.background(iL.background);
+           if (change) {
+               n=-1;
+               uI.removeScrollList();
+               cp5.setFont(iL.baseFont);
+               uI.removeBack();
+                uI.removeQuizSelect();
+                uI.logonobject();
 
+            }
+            p.background(iL.background);
         }break;
 
         case 1:{
             p.background(122);
 if(change) {
     if(!isStudent){
+students.clear();
         for(int i = 0; i<fH.students.size(); i++) {
+
             students.add(fH.students.get(i).fullName);
 
         }
    uI.addScrollList(students);
-
+uI.back();
     }else {
-
+        uI.removeQuizOptions();
         quiz.quizSelect();
-
+        uI.back();
 
 }
 
@@ -118,10 +126,11 @@ if(change) {
 
 
     }
-        case 3:{
+        case 2:{
             p.background(122);
             if(change) {
                 quiz.startQuiz(quizSelected);
+                uI.back();
             }
 
             quiz.showQuestion();

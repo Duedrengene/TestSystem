@@ -2,6 +2,7 @@
 import controlP5.*;
 import processing.core.*;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -62,13 +63,13 @@ public class TestSystem extends PApplet {
     public void setup() {
 
 iL.loadImage();
-
         cp5 = new ControlP5(this);
-        uI = new UI(cp5,this);
+        uI = new UI(cp5,iL,this);
 
 
         uI.logonobject();
 
+        cp5.setFont(iL.baseFont);
 
         fH = new FileHandler(this);
         fH.tableData();
@@ -108,7 +109,6 @@ display.display();
             cp5.remove("logOn");
 
 
-                println("Stinke");
                 screen++;
                 change = true;
 
@@ -166,7 +166,7 @@ display.display();
 
         public void quiz1(){
         display.quizSelected = 1;
-        screen=3;
+        screen=2;
             change = true;
 
 
@@ -174,7 +174,7 @@ display.display();
 
         public void quiz2(){
             display.quizSelected = 2;
-            screen=3;
+            screen=2;
             change = true;
 
 
@@ -182,11 +182,21 @@ display.display();
         }
         public void quiz3(){
             display.quizSelected = 3;
-            screen=3;
+            screen=2;
 change = true;
 
 
         }
+
+        public void back(){
+            display.quizSelected = 0;
+        screen--;
+        change=true;
+        quiz.change = true;
+        quiz.i=0;
+        quiz.score =0;
+        }
+
         }
 
 

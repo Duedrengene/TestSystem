@@ -16,8 +16,8 @@ String d;
 
 public Question(PApplet p,String correctAnswer,String prompt,String type,String a,String b,String c,String d){
 
- this.p = p;
- this.correctAnswer = correctAnswer;
+this.p = p;
+this.correctAnswer = correctAnswer;
 this.prompt = prompt;
 this.type = type;
 this.a= a;

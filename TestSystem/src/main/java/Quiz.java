@@ -1,11 +1,9 @@
-import controlP5.ControlP5;
 import processing.core.PApplet;
 
-import java.awt.*;
-import java.io.File;
 import java.util.ArrayList;
 
 public class Quiz {
+
 boolean change = true;
 FileHandler fH;
 int questionType;
@@ -48,7 +46,7 @@ this.fH = fH;
             } else if (type3.equals("Ikke Tilgængelig")) {
                 if (!questions.get(i).type.equals(type1) && !questions.get(i).type.equals(type2)) {
                     type3 = questions.get(i).type;
-                    break;
+
                 }
             }
 
@@ -75,8 +73,6 @@ this.fH = fH;
 
 
     public void startQuiz(int quizType){
-
-
 
 
     switch(quizType){
@@ -113,8 +109,9 @@ if(activeQuestions.size()>i) {
 
 
 
-    p.textFont(iL.titelfont);
-    p.text(activeQuestions.get(i).prompt, 1920 / 2-275, 300);
+    p.textFont(iL.titelFont);
+    p.textAlign(p.CENTER);
+    p.text(activeQuestions.get(i).prompt, 1920 / 2, 300);
 
 }else {
     if (change) {
@@ -125,12 +122,12 @@ if(activeQuestions.size()>i) {
     }
     if (score != activeQuestions.size()) {
         p.textSize(22);
-        p.text("Du fik " + score + " point ud af" + activeQuestions.size() + " bedre held næste gang", p.width / 2, 200);
-    } else
-            p.textSize(22);
-            p.text("Du fik " + score + " point ud af" + activeQuestions.size(), p.width / 2, 200);
-            p.text("Flot arbejde makker!",p.width/2,150);
-
+        p.text("Du fik " + score + " point ud af " + activeQuestions.size() + " point, bedre held næste gang", p.width / 2, 200);
+    } else {
+        p.textSize(22);
+        p.text("Du fik " + score + " point ud af " + activeQuestions.size()+" Point", p.width / 2, 200);
+        p.text("Flot arbejde makker!", p.width / 2, 150);
+    }
 }
 
     }

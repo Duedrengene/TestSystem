@@ -12,7 +12,7 @@ public class FileHandler {
     Table table;
     Table qTable;
     String userName;
-PApplet p;
+    PApplet p;
 FileHandler(PApplet p){
     this.p = p;
     table = new Table();
@@ -24,8 +24,6 @@ FileHandler(PApplet p){
  
     void tableData() {
 
-        System.out.println(table);
-        p.println(table.getColumnTitle(0) + " total rows in table");
         for (TableRow row : table.rows()) {
             //     row.setString("Fornavn","Mathias ");
             String username = row.getString("Username");
@@ -40,8 +38,6 @@ FileHandler(PApplet p){
 
             users.add(new Users(fornavn, efternavn, username, password, type, score1, score2, score3));
 
-//            p.println(row);
-            //          p.println(fornavn + efternavn);
 
         }
 
@@ -64,7 +60,6 @@ FileHandler(PApplet p){
             String c = row.getString("C");
             String d = row.getString("D");
             questions.add(new Question(p,answer,question,type,a,b,c,d));
-        System.out.println(questions.get(0));
         }
 
 
